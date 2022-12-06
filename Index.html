@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="all">
+      <div id="setting">
+        <span>|||</span>
+        <input type="text" id="input1">
+        <div id="img" onclick="change()">
+          <p>press to change</p>
+        </div>
+        <input type="text" id="input2">
+      </div>
+      <div id="border">
+        <div id="manitor">
+          <h1 id="mt"></h1>
+          </div>
+        <div id="alaem">
+          <button onclick="zarb()" id="zarb">×</button>
+          <button onclick="tagh()" id="tagh">÷</button>
+          <button onclick="menh()" id="menh">-</button>
+          <button onclick="jaam()" id="jaam">+</button>
+        </div>
+        <div id="SvF">
+          <button id="reset" onclick="reset()">reset</button>
+          <button id="mosavi" onclick="mosavi()">=</button>
+        </div>
+        <div id="numbersO">
+          <button onclick="one()">1</button>
+          <button onclick="two()">2</button>
+          <button onclick="tri()">3</butto>
+          <button onclick="fur()">4</button>
+          <button onclick="fiv()">5</button>
+          <button onclick="six()">6</button>
+          <button onclick="svn()">7</button>
+          <button onclick="has()">8</button>
+          <button onclick="nin()">9</button>
+          <button onclick="sfr()">0</button>
+          <button onclick="sfr1()" id="sfr">00</button>
+          <button onclick="sfr2()" id="sfr1">000</button>
+        </div>
+        <div id="numbersT">
+          <button onclick="oneT()">1</button>
+          <button onclick="twoT()">2</button>
+          <button onclick="triT()">3</button>
+          <button onclick="furT()">4</button>
+          <button onclick="fivT()">5</button>
+          <button onclick="sixT()">6</button>
+          <button onclick="svnT()">7</button>
+          <button onclick="hasT()">8</button>
+          <button onclick="ninT()">9</button>
+          <button onclick="sfr()">0</button>
+          <button onclick="sfr1()">00</button>
+          <button onclick="sfr2()">000</button>
+        </div>
+        <div id="numbersD">
+          <button disabled>1</button>
+          <button disabled>2</button>
+          <button disabled>3</button><br>
+          <button disabled>4</button>
+          <button disabled>5</button>
+          <button disabled>6</button><br>
+          <button disabled>7</button>
+          <button disabled>8</button>
+          <button disabled>9</button>
+          <button disabled>0</button>
+          <button disabled>00</button>
+          <button disabled>000</button>
+        </div>
+      </div>
+      <div>
+      <div id="more">
+        <p>More</p>
+      </div>
+        <div id="MoreMenu">
+          <button onclick="manfi()" id="">-M</button>
+          <button onclick="mosbat()">+M</button>
+        </div>
+      </div>
+      
+<pre id="error">You only can use 7 number</pre>
+      <div id="ps">
+      <p id="aval"></p>
+      <p id="dovom"></p>
+      <p id="alamat"></p>
+      </div>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
