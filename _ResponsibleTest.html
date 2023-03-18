@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsible Test</title>
+  <link rel="stylesheet" href="Test.css">
+</head>
+<style>
+  * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box
+  }
+
+  body {
+    position: relative;
+    height: 2000px;
+    width: 1500px;
+    background: linear-gradient(to bottom right, #FDFFD7, #FAFFA9);
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+
+  iframe {
+    border: 7px solid greenyellow;
+    background: white;
+    box-shadow: 0 0 10px gray;
+  }
+
+  .base {
+    width: 85%;
+    height: 20%;
+    background: deepskyblue;
+    position: fixed;
+    bottom: 100px;
+    left: 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px gray;
+    overflow: scroll
+  }
+
+  input {
+    display: block;
+    position: absolute;
+  }
+
+  #width {
+    width: 400px;
+    position: absolute;
+    top: 65px;
+    right: 80px;
+    transform: rotate(180deg)
+  }
+
+  #height {
+    -webkit-appearance: slider-vertical;
+    position: absolute;
+    top: 80px;
+    right: 5px;
+    height: 300px;
+    transform: rotate(180deg)
+  }
+
+  .mini-pc {
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 300px;
+    background: red;
+    top: 80px;
+    right: 80px;
+  }
+
+  #Go {
+    width: 100px;
+    height: 75px;
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: bold;
+    border-radius: 50px;
+    position: absolute;
+    top: 200px;
+    right: 600px;
+  }
+
+  p {
+    font-size: 50px
+  }
+</style>
+
+<body>
+
+  <div class="base">
+
+    <input type="range" id="width" value="400" max="400" oninput="change()">
+
+    <input type="range" id="height" value="300" max="300" oninput="change()">
+
+    <div class="mini-pc" id="mc"></div>
+
+    <button id="Go" onclick="go()">GO</button>
+
+    <p id="txtw">width = 2000 px</p>
+    <p id="txth"> height = 1500 px</p>
+
+    <input type="range" value="1" max="1" id="btn">
+
+  </div>
+
+  <iframe src="Khaneh/index.html" width="100%" height="50%" id="page">
+  </iframe>
+
+</body>
+<script>
+  var widthX = document.getElementById('width');
+  var heightY = document.getElementById('height');
+  var cube = document.getElementById('mc');
+  var page = document.getElementById('page');
+  var txtW = document.getElementById('txtw');
+  var txtH = document.getElementById('txth');
+  var radio = document.getElementById('btn');
+
+  function change()
+  {
+    changeGo()
+
+    if (radio.value == 1) {
+      page.style.width = widthX.value * 5 + 'px'
+      page.style.height = heightY.value * 5 + 'px'
+    }
+  }
+
+  function changeGo()
+  {
+    mc.style.width = widthX.value + 'px'
+    mc.style.height = heightY.value + 'px'
+
+    txtW.innerHTML = 'width = ' + widthX.value * 5 + ' px';
+    txtH.innerHTML = 'height = ' + heightY.value * 5 + ' px';
+  }
+
+  function go()
+  {
+    page.style.width = widthX.value * 5 + 'px';
+    page.style.height = heightY.value * 5 + 'px'
+  }
+</script>
+
+</html>

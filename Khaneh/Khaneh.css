@@ -1,0 +1,148 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Nastaliq+Urdu:wght@600&family=Oxanium:wght@600&display=swap');
+  
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*NAV BAR*/
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  backdrop-filter: blur(10px);
+  background: #181818;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #1981FF;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: height 0.3s ease-in;
+}
+nav img {
+  position: absolute;
+  height: 90%;
+  border-radius: 50%;
+  margin-left: 3px;
+  transition: all 0.3s ease-in;
+}
+nav .menu-btn {
+  position: absolute;
+  width: 45px;
+  height: 40px;
+  right: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+nav .menu-btn span {
+  width: 80%;
+  height: 5px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  transition: all 0.3s ease-in
+}
+nav ul {
+  position: fixed;
+  color: black;
+  width: 110px;
+  height: 200px;
+  top: 50px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  font-family: 'Lalezar', cursive;
+  list-style: none;
+  border-radius: 0 0 0 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+nav ul li {
+  margin-right: 15px;
+  margin-top: 30px;
+  text-shadow: 0 0 2px gray
+}
+nav ul li p {
+  margin-right: 25px;
+}
+nav ul li img {
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  border-radius: 0;
+  margin-left: 10px;
+}
+
+
+nav .menu-btn:hover span:nth-child(2) {
+  opacity: 0.5
+}
+nav img:hover {
+  opacity: 0.8;
+}
+
+nav img:active {
+  transform: scale(0.9)
+}
+
+
+@media screen and (min-width: 481px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    border-bottom: 3px solid #1981FF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+  }
+
+  nav .menu-btn{
+    display: none;
+  }
+
+  nav ul {
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: flex;
+  color: white;
+  font-weight: 1rem;
+  right: 5px;
+  font-size: 25px;
+  gap: 50px;
+  list-style: none;
+  font-family: 'Lalezar', cursive;
+  margin-right: 7%;
+  top: auto;
+  }
+  nav ul li {
+    margin-right: 0;
+    margin-top: 0;
+    text-shadow: 0 0 0 none
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    border-bottom: 5px solid #1981FF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+  }
+
+  nav .menu-btn {
+    display: none;
+  }
+  nav ul {
+    font-size: 35px;
+    gap: 55px;
+    margin-right: 7%;
+  }
+}
